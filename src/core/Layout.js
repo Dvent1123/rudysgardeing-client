@@ -27,6 +27,42 @@ const Layout = ({children, match, history}) => {
                         </Fragment>
                     )
                 }
+
+                {isAuth() && isAuth().role === 'subscriber' &&(
+                        <Fragment>
+                            <li>
+                                <Link to="/home">
+                                    {isAuth().name}
+                                </Link>
+                            </li>                   
+                            <li>
+                                <Link to="/settings">
+                                    Settings
+                                </Link>
+                            </li>     
+                        </Fragment>
+                    )}
+
+                {isAuth() && isAuth().role === 'admin' && (
+                            <Fragment>
+                                <li>
+                                    <Link to="/admin">
+                                        {isAuth().name}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/admin/payments">
+                                        Make a Bill
+                                    </Link>
+                                </li>            
+                                <li>
+                                    <Link to="/admin/settings">
+                                        Settings
+                                    </Link>
+                                </li>
+                            </Fragment>
+                        )}
+
                 {isAuth() && (
                     <li>
                         <span

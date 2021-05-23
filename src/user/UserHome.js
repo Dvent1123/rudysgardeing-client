@@ -5,7 +5,7 @@ import { isAuth, getCookie, signout} from '../helpers/auth'
 import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 
-const PrivateHome = ({ history}) => {
+const UserHome = ({ history}) => {
     const [values, setValues] = useState({
         role: '',
         name: '',
@@ -51,4 +51,4 @@ const PrivateHome = ({ history}) => {
     )
 }
 
-export default PrivateHome
+export default UserHome

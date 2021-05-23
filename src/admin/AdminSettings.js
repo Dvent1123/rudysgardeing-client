@@ -5,7 +5,7 @@ import { isAuth, getCookie, signout } from '../helpers/auth'
 import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.min.css'
 
-const Settings = ({ history }) => {
+const AdminSettings = ({ history }) => {
     const [values, setValues] = useState({
         role: '',
         name: '',
@@ -55,7 +55,7 @@ const Settings = ({ history }) => {
         setValues({ ...values, buttonText: 'Submitting'})
         axios({
             method: 'PUT',
-            url: `${process.env.REACT_APP_API}/user/update`,
+            url: `${process.env.REACT_APP_API}/admin/update`,
             data: { name, password},
             headers: {
                 Authorization: `Bearer ${token}`
@@ -114,4 +114,4 @@ const Settings = ({ history }) => {
     </Layout>
 );}
 
-export default Settings;
+export default AdminSettings;

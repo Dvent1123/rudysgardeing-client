@@ -63,7 +63,7 @@ const Signin = ({ history }) => {
         <Layout>
             <div>
                 <ToastContainer />
-                {isAuth() ? <Redirect to="/user/home" /> : null}
+                {isAuth() ? <Redirect to="/home" /> : null}
                 <h1>Signin</h1>
                 {signinForm()}
             </div>
