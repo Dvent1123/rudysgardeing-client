@@ -13,7 +13,7 @@ const AdminPayments = ({history}) => {
         service: 'Description of Job',
         amount: 0.00,
         total: 0.00,
-        paid_status: false,
+        paid_Status: false,
         due: "2014-11-20"
     });
 

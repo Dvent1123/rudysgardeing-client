@@ -10,6 +10,7 @@ import AdminRoute from './auth/AdminRoute'
 import Settings from './core/Settings'
 import AdminSettings from './admin/AdminSettings'
 import AdminPayments from './admin/AdminPayments'
+import Checkout from './helpers/Checkout'
 
 const Routes = () => {
     return (
@@ -19,6 +20,7 @@ const Routes = () => {
                 <Route path="/signup" exact component={Signup}/>
                 <Route path="/signin" exact component={Signin}/>
                 <PrivateRoute path='/home' exact component={UserHome} />
+                <PrivateRoute path='/pay/:id' exact component={Checkout} />
                 <PrivateRoute path='/settings' exact component={Settings} />
                 <AdminRoute path='/admin' exact component={AdminHome} />
                 <AdminRoute path='/admin/settings' exact component={AdminSettings} />
