@@ -13,7 +13,7 @@ const Bill = ({bill, role}) => {
         {
             role === "admin" ?
             null :
-            <button><a href={`${process.env.REACT_APP_CLIENT}/pay/${_id}`}>View Bill</a></button>
+            <button><a href={`${process.env.REACT_APP_CLIENT}/pay/${_id}/${service}`}>View Bill</a></button>
         }
         </div>
     )

@@ -53,7 +53,7 @@ const AdminPayments = ({history}) => {
 
     const clickSubmit = event => {
         event.preventDefault()
-
+        console.log(process.env.REACT_APP_IRRIGATION)
         axios({
             method: 'POST',
             url: `${process.env.REACT_APP_API}/payment`,
@@ -76,7 +76,8 @@ const AdminPayments = ({history}) => {
         <form>
             <div>
                 <label>Email</label>
-                <select name="emails">
+                <select name="email" value={email} onChange={handleChange('email')}>
+                    <option value="Pick">Pick and Email</option>
                     {
                         emails ?
                         emails.map((email, index) => {
@@ -90,7 +91,13 @@ const AdminPayments = ({history}) => {
 
             <div>
                 <label>Service(s)</label>
-                <input onChange={handleChange('service')} value={service} type="text" />
+                <select name="service" value={service} onChange={handleChange('service')}>
+                    <option value='None'>None</option>
+                    <option value={process.env.REACT_APP_IRRIGATION}>$55: Irrigation</option>
+                    <option value={process.env.REACT_APP_HARD_SCRAPE}>$75: Hard Scrape</option>
+                    <option value={process.env.REACT_APP_LANDSCAPING}>$100: Landscaping</option>
+                </select>
+                {/* <input onChange={handleChange('service')} value={service} type="text" /> */}
             </div>
             <div>
                 <label>Amount</label>

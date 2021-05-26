@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom'
 import {loadStripe} from '@stripe/stripe-js';
 import axios from 'axios'
 
@@ -14,6 +15,7 @@ let stripe;
 })();
 
 const Checkout = () => {
+  const { id, service } = useParams()
   // When the buy button is clicked...
   const handleClick = async (event) => {
     if(!stripe) {
@@ -27,7 +29,9 @@ const Checkout = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      data: {price: process.env.PRICE},
+      data: {
+        price: service,
+        id: id}
     })
 
 
