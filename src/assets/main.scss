@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #007F5F;
+    --secondary-color: #2B9348;
+    --tertiary-color: #55A630;
+    --background-white: #ffffff;
+  }
+
+body{
+    font-family: 'Red Hat Text', sans-serif;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p{
+    font-size: 0.75rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 100vw;
+    height:100%;
+    background-color: var(--background-white);
+  }
+  
+  .container {
+      padding: 0em;
+      margin: 0 auto;
+      height: 100%;
+      width: 100vw;
+      max-width: 1200px;
+      background-color: var(--background-white);
+  
+  }
+
+  //Nav Container
+  .nav-container{
+      width: 100%;
+      display: flex;
+      padding: 2em 0;
+      .logo-container{
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+            width: 25%;
+          img{
+              height: 75px;
+              width: 75px;
+          }
+      }
+      nav{
+          display: flex;
+          align-items: center;
+          width: 75%;
+      }
+      .nav-items{
+          display: flex;
+          align-items: center;
+          width: 100%;
+
+            .nav-item{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+            li{
+                list-style-type: none;
+            }
+            #subscribe{
+                display: unset;
+                text-align: center;
+                width: fit-content;
+                padding: 0.5em 1em;
+                background-color:rgba(85, 166, 48, .1);
+                border: 1px solid rgba(85, 166, 48, 0.1);
+                border-radius: 1.25em;
+                color: var(--primary-color)
+            }
+      }
+  }
+
+  //Banner
+  .banner{
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    background-image: url("./images/banner-min.png");
+    background-size: cover;
+
+    .banner-wrapper{
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .banner-container{
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      max-width: 50%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 2em;
+
+    }
+    .banner-text{
+      color: white;
+
+      h1{
+        font-size: 3.5em;
+        line-height: 1.25em;
+      }
+
+      button{
+        background-color: transparent;
+        color: white;
+        padding: 0.75em 2em;
+        border: 0.5px solid white;
+        border-radius: 1.5em;
+        margin: 2em 0 0 0;
+      }
+    }
+  }
+
+  .mission-container{
+    margin: 0 auto;
+    width: 100vw;
+    height:100%;
+    background-color: var(--background-white);
+    display: flex;
+
+    .left-image{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 5em 0em;
+    }
+  }
+
+  .mission{
+    padding: 5em 0em;
+    height: 100%;
+    width: 100vw;
+    max-width: 1200px;
+    background-color: var(--background-white);
+    display: flex;
+  }
+
+  .mission-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 8em 6em 6em;
+    h2{
+      font-size: 2.5em;
+    }
+    h4{
+      font-weight: normal;
+      padding: 2em 0;
+      line-height: 1.5em;
+    }
+
+    p{
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 80%;
+    }
+  }
+
+
+  .our-services{
+    height: 100%;
+    width: 100vw;
+    max-width: 1200px;
+    background-color: var(--background-white);
+    display: flex;
+    flex-direction: column;
+    h2{
+      font-size: 2.5em;
+      padding: 2em 0;
+    }
+  }
+  .services-container{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-auto-rows: minmax(300px, auto);
+    gap: 50px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .services-image-1{
+    background-image: url("./images/Gallery_Image5-min.png");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .services-image-2{
+    background-image: url("./images/Gallery_image8-min.png");
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .services-image-3{
+    background-image: url("./images/Gallery_Image1-min.png");
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .services-image-4{
+    background-image: url("./images/ProjectCover-min.png");
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .services-image-5{
+    background-image: url("./images/Gallery_image10-min.png");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .services-image-6{
+    background-image: url("./images/Gallery_image9-min.png");
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+  .services-image-7{
+    background-image: url("./images/Gallery_image11-min.png");
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .services-image-1,
+  .services-image-2,
+  .services-image-3,
+  .services-image-4,
+  .services-image-5,
+  .services-image-6,
+  .services-image-7{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1.5em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1.35em;
+
+    h4{
+      font-size: 130%;
+      line-height: 2.5em;
+    }
+
+    h5{
+      font-weight: normal;
+    }
+  }
