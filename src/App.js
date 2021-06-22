@@ -105,13 +105,22 @@ function App() {
                 </div>
               </div>
           </section>
-          <section className="subsribe">
-            <div className="subsrcibe-container">
+          <section className="subscribe">
+            <div className="subsribe-container">
               <div className="subscribe-content">
-                <h3>Subscribe to our Newsletter and get updates!</h3>
-                {/* Insert a form here */}
+                <h3>Subscribe to our <br /> Newsletter and get updates!</h3>
+                <form className='subscribe-form'>
+                    <div>
+                      <input type="email" placeholder="Email Address..."/>
+                    </div>
+                    <div>
+                      <button>
+                        Subsribe
+                      </button>
+                    </div>
+                </form>
               </div>
-              <div className="susbrice-image">
+              <div className="subscribe-image">
                 <img src={plant} alt="plant" />
               </div>
             </div>
