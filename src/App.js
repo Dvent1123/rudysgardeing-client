@@ -108,14 +108,14 @@ function App() {
           <section className="subscribe">
             <div className="subsribe-container">
               <div className="subscribe-content">
-                <h3>Subscribe to our <br /> Newsletter and get updates!</h3>
+                <h3>Subscribe to our Newsletter <br /> and get updates!</h3>
                 <form className='subscribe-form'>
-                    <div>
+                    <div className='email-input'>
                       <input type="email" placeholder="Email Address..."/>
                     </div>
-                    <div>
-                      <button>
-                        Subsribe
+                    <div className='sub-btn-container'>
+                      <button className='sub-button'>
+                        Subscribe
                       </button>
                     </div>
                 </form>
@@ -125,55 +125,47 @@ function App() {
               </div>
             </div>
           </section>
-          <section className="contact">
-            <div className="contact-container">
-              <div className="contact-text">
-                <h3>Are you ready to transform your outdoor space</h3>
-              </div>
-              <div className="contact-at">
-                <div className="contact-at-container">
-                  <h5>Contact us at : (123)456-7891</h5>
-                </div>
-              </div>
-            </div>
-          </section>
           <section className="hard-scrape-wrapper">
             <div className="hard-scrape-container">
               <div className="hard-scrape-images">
-                <img src={gallery_image2} alt="house" />
-                <img src={gallery_image4} alt="hut" />
-                <img src={gallery_image3} alt="bench" />
-                <img src={gallery_image6} alt="couches" />
+                <div className="scrape-image-2"></div>
+                <div className="scrape-image-4"></div>
+                <div className="scrape-image-3"></div>
+                <div className="scrape-image-6"></div>
               </div>
               <div className="hard-scrape-content-container">
                 <div className="hard-scrape-text">
                   <h4>Hard Scrape Service</h4>
                   <p>Our landscaping services offer implementation of the following types of features:</p>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Customized outdoor lighting</p>
+                    <li>Customized outdoor lighting</li>
                   </ul>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Plants, trees, vegetation, and shrubbery</p>
+                    <li>Plants, trees, vegetation, and shrubbery</li>
                   </ul>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Seasonal garden beds</p>
+                    <li>Seasonal garden beds</li>
                   </ul>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Fountains and Ponds</p>
+                    <li>Fountains and Ponds</li>
                   </ul>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Patios and Decks</p>
+                    <li>Patios and Decks</li>
                   </ul>
                   <ul>
-                    <li><img src={plant_logo} alt="plant_logo" /></li>
-                    <p>Fence Installation</p>
+                    <li>Fence Installation</li>
                   </ul>
                 </div>
+              </div>
+            </div>
+          </section>
+          <section className="contact">
+            <div className="contact-container">
+              <div className="contact-text">
+                <h3>Are you ready to transform your <br /> outdoor space?</h3>
+              </div>
+              <div className="contact-at">
+                  <h5>Contact us at : (123)456-7891</h5>
               </div>
             </div>
           </section>
